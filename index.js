@@ -13,7 +13,7 @@ server.on('request', function (request, response) {
 		} else {
 			response.statusCode = 404;
 			response.setHeader('Content-Type', 'image/jpg');
-			file.readFile('https://www.corinthcsd.org/resources/front/images/404-img.png', function(err, data){ 
+			file.readFile('./404-img.png', function(err, data){ 
 				response.write(data);
 				response.end();
 			});
